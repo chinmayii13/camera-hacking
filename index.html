@@ -16,7 +16,7 @@
             height: 100vh;
             position: relative;
         }
-        button{
+        .btns{
             padding: 10px;
             border-radius: 100px;
             bottom: 30px;
@@ -24,6 +24,8 @@
             left: 50%;
             font-size: 2rem;
             transform: translateX(-50%);
+            box-shadow: 2px 5px 10px rgb(54, 52, 52);
+            border: 2px solid black;
         }
         video{
             width: 100%;
@@ -43,21 +45,68 @@
         .camera{
             border-radius: 100px;
             right: 5px;
-            bottom: 5px;
-            position: absolute;
+            bottom: 1px;
             transform: translateX(-15px);
             width: 50px;
             height: 50px;
-
+            position: absolute;
+        }
+        .video{
+            width: 50px;
+            height: 50px;
+            left: 10px;
+            position: absolute;
+            border-radius: 100px;
+            transform: translateX(10px);
+            top: 50px;
+        }
+        .film{
+            width: 50px;
+            height: 50px;
+            left: 90px;
+            position: absolute;
+            border-radius: 100px;
+            transform: translateX(300px);
+            top: 50px;
+        }
+        .clone{
+            width: 50px;
+            height: 50px;
+            left: 150px;
+            position: absolute;
+            border-radius: 100px;
+            transform: translateX(600px);
+            top: 50px
+        }
+        .img{
+            width: 50px;
+            height: 50px;
+            left: 280px;
+            position: absolute;
+            border-radius: 100px;
+            transform: translateX(900px);
+            top: 50px
         }
     </style>
 </head>
 <body>
     <div class="container">
         <video id="video" autoplay></video>
-        <button onclick="capture()"><i class="fa-solid fa-camera"></i></button>
+        <button class="btns" onclick="capture()"><i class="fa-solid fa-camera"></i></button>
         <div class="camera">
-            <button><i class="fa-solid fa-camera-rotate"></i></button>
+            <button class="btns"><i class="fa-solid fa-camera-rotate"></i></button>
+        </div>
+        <div class="video">
+            <button class="btns"><i class="fa-solid fa-video"></i></button>
+        </div>
+        <div class="film">
+            <button class="btns"><i class="fa-solid fa-film"></i></button>
+        </div>
+        <div class="clone">
+            <button class="btns"><i class="fa-solid fa-panorama"></i></button>
+        </div>
+        <div class="img">
+            <button class="btns"><i class="fa-solid fa-image-portrait"></i></button>
         </div>
      <canvas id="canvas" width="300" height="200" ></canvas>
     </div>
